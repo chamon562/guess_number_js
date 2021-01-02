@@ -4,21 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linking in the cdn for bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- linking my style.css for later use to desgin -->
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Guess The Right Number</title>
 </head>
 
-<body>
-    <div class="title">
-        <h1>Guess That Number</h1>
-    </div>
-    <div class="game">
-        <h2>1.2.3</h2>
-        <form action="">
-            <input type="text" value="Type in the number you want to guess!">
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+<body class="text-center">
+    <!-- navbar navbar-dark bg-primary for blue backround for the navbar -->
+    <nav class="navbar navbar-dark bg-primary">
+        <a href="#" class="navbar-brand"> Guess The Right Number!</a>
+    </nav>
+    <main>
+        <h1 class="banner p-3">1.2.3.</h1>
+        <div class="form-group">
+            <!-- class is the style given by boostrap -->
+            <input type="number" id="number-guess" class="form-control from-control-lg"
+                placeholder="Guess your number please.">
+        </div>
+        <div id="result">
+            <!-- results will be appended here -->
+        </div>
+        <button type="button" id="number-submit" class="btn btn-lg btn-secondary">Check Me</button>
+        <button type="button" id="restart-game" class="btn btn-lg btn-light">Restart Game</button>
+        <div id="history">
+            <!-- this is where the guess history will be dispalyed when the user makes a wrong guess too high or low -->
+        </div>
+    </main>
+
+
     <script src="app.js"></script>
 </body>
 
