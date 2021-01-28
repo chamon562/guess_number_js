@@ -47,12 +47,14 @@ function playGame() {
     console.log(numberGuess)
 
     if (numberGuess >= correctNumber + 20) {
-        console.log("Guess is way too high");
+        console.log("Guess is way too high!");
     } else if (numberGuess >= correctNumber + 10) {
-        console.log("close, but still a little too high")
+        console.log("close, but still a little too high.")
     } else if (numberGuess >= correctNumber +5){
-        console.log("Very close! but still a little bit high")
-    } 
+        console.log("Very close! but still a little bit high.")
+    } else if (numberGuess <= correctNumber -20){
+        console.log("Guess is way too low!")
+    }
 }
 
 /**
