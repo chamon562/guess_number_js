@@ -44,8 +44,9 @@ function playGame() {
     by the window.onload = function(){...} is clicked. 
     */
     let numberGuess = document.getElementById("number-guess").value;
-    console.log(numberGuess)
-    displayResult()
+    console.log(numberGuess);
+    // pass in numberGuess and accept numberGuess as a parameter in displayResult function
+    displayResult(numberGuess);
 }
 
 /**
@@ -53,7 +54,7 @@ function playGame() {
  * HINT: Use if, else if, else statement 
  */
 // *CODE GOES BELOW HERE *
-function displayResult() {
+function displayResult(numberGuess) {
     if (numberGuess >= correctNumber + 20) {
         console.log("Guess is way too high!");
         document.getElementById("history").innerHTML = "<p>Guess is way too high!</p>"
