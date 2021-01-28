@@ -70,23 +70,33 @@ function displayResult(numberGuess) {
         showNumberAbove()
     } else if (numberGuess >= correctNumber + 10) {
         console.log("Close! But still a little too high.")
+        showNumberAbove()
     } else if (numberGuess >= correctNumber + 5) {
         console.log("Very close! But still a little bit high.")
+        showNumberAbove()
     } else if (numberGuess > correctNumber) {
         console.log("Extremely very close! But still high.")
+        showNumberAbove()
     }
     else if (numberGuess <= correctNumber - 20) {
         console.log("Guess is way too low!")
         showNumberBelow()
     } else if (numberGuess <= correctNumber - 10) {
         console.log("Close! But still alitle too low.")
+        showNumberBelow()
+
     } else if (numberGuess <= correctNumber - 5) {
         console.log("Very close! But still a little bit low.")
+        showNumberBelow()
+
     } else if (numberGuess < correctNumber) {
         console.log("Extremely Very close! But still low.")
+        showNumberBelow()
+
     } else {
         console.log("Bingo! You Got the right number! You are a Psychic!")
         showYouWon();
+
     }
     return
 }
