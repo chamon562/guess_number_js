@@ -11,13 +11,15 @@
  * TODO to Done: Generate a random number 1 to 100 and save it to variable correctNumber
  * TODO to Done: Console whether the guess is too high, too low, or is correct inside playGame function
  * TODO to Done: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
- * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow
+ * TODO to Done: Complete the showYouWon, showNumberAbove, showNumberBelow
  * TODO: Use the showYouWon... functions within displayResult to display the correct dialog
  * TODO: Save the guess history in a variable called guess
  * TODO: Display the guess history using displayHistory() function
  * TODO: Use the initGame() function to restart the game
  */
-
+// Stretch Goal add limited number of tries and points for winning with lease amount of guesses. first try is 100 points. give 5 tries. decrease by 20% 80, 60, 40, 20
+// create a back end for score board to store leader board and give a three letter entry. 
+// winner gets random cut cat picture. the greater the win the cooler the picture with gifs or regular stand kitty.
 // Variable to store the list of guesses 
 
 // Variable for store the correct random number 
@@ -57,10 +59,8 @@ function playGame() {
 function displayResult(numberGuess) {
     if (numberGuess >= correctNumber + 20) {
         console.log("Guess is way too high!");
-        document.getElementById("history").innerHTML = "<p>Guess is way too high!</p>"
     } else if (numberGuess >= correctNumber + 10) {
         console.log("Close! But still a little too high.")
-        document.getElementById("history").innerHTML = "<p>Close! But still a little too high.</p>"
     } else if (numberGuess >= correctNumber + 5) {
         console.log("Very close! But still a little bit high.")
     } else if (numberGuess > correctNumber) {
@@ -73,9 +73,9 @@ function displayResult(numberGuess) {
     } else if (numberGuess <= correctNumber - 5) {
         console.log("Very close! But still a little bit low.")
     } else if (numberGuess < correctNumber) {
-        console.log("Extremely Very close! But still low. ")
+        console.log("Extremely Very close! But still low.")
     } else {
-        console.log("Bing0! You Got the right numbe! You are a Psychic!")
+        console.log("Bingo! You Got the right number! You are a Psychic!")
         showYouWon();
     }
     return
@@ -149,13 +149,15 @@ function getDialog(dialogType, text) {
             dialog = "<div class='alert alert-success' role='alert'>"
             break;
     }
+    // appending text to dialog
     dialog += text;
+    // closing div tag for dialog
     dialog += "</div>"
     return dialog;
 }
 
 function showYouWon() {
-    const text = "Awesome job, you got it!"
+    const text = "Bingo! You Got the right number! You are a Psychic!"
     /**
      * Retrieve the dialog using the getDialog() function
      * and save it to variable called dialog
@@ -168,14 +170,17 @@ function showYouWon() {
     document.getElementById("result").innerHTML = dialog;
 }
 function showNumberAbove() {
-    const text = "Your guess is too high!"
+    const text1 = "Guess is way too high!"
+    // const text2 = "Close! But still a little too high."
+    // const text3 = "Very close! But still a little bit high."
+    // const text4 = "Extremely very close! But still high."
     /**
      * Retrieve the dialog using the getDialog() function
      * and save it to variable called dialog
      * HINT: Use the 'warning' and text parameters 
      */
     // *CODE GOES BELOW HERE *
-    let dialog = getDialog("warning", text);
+    let dialog = getDialog("warning", text1);
     document.getElementById("result").innerHTML = dialog;
 }
 
