@@ -63,7 +63,9 @@ function playGame() {
         console.log("Very close! But still a little bit low.")
     } else if(numberGuess < correctNumber){
         console.log("Extremely Very close! But still low. ")
-    } 
+    } else {
+        console.log("Bing! You Got the right numbe! You are a Psychic!")
+    }
 }
 
 /**
