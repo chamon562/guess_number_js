@@ -73,7 +73,8 @@ function resetResultContent() {
  */
 function getRandomNumber() {
     // *CODE GOES BELOW HERE *
-    let correctNumber = Math.random(100);
+    // Using Math.floor to get a whole number of a Random number from 1 to 100
+    let correctNumber = Math.floor(Math.random() * 100);
     console.log(correctNumber)
 }
 getRandomNumber()
