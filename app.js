@@ -14,7 +14,7 @@
  * TODO to Done: Complete the showYouWon, showNumberAbove, showNumberBelow
  * TODO to Done: Use the showYouWon... functions within displayResult to display the correct dialog
  * TODO to Done: Save the guess history in a variable called guess
- * TODO: Display the guess history using displayHistory() function
+ * TODO to Done:: Display the guess history using displayHistory() function
  * TODO: Use the initGame() function to restart the game
  */
 // Stretch Goal add limited number of tries and points for winning with lease amount of guesses. first try is 100 points. give 5 tries. decrease by 20% 80, 60, 40, 20
@@ -98,6 +98,16 @@ function displayResult(numberGuess) {
  */
 function initGame() {
     // *CODE GOES BELOW HERE *
+    // Reset correctNumber
+    correctNumber = getRandomNumber();
+    // reset the result display
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("number-guess").value = "";
+    // reset he guesses array to guesses = [];
+    guesses = [];
+    // reset the guess history display
+    displayHistory();
+
 }
 
 /**
@@ -158,7 +168,7 @@ function displayHistory() {
         list += "<li class='list-group-item'>" + "You guessed " + guesses[index] + "</li>"
         // increment index to go to the next address 
         // index += 1
-        index-=1
+        index -= 1
         // break;
         // went through all arrays, created all list items and appended to list variable
         // can be seen on screen because of the dom grabbing history and using .innerHTML equal to the list created
