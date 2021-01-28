@@ -143,7 +143,7 @@ function displayHistory() {
     // recent result from top to bottom
     // let index = 0;
     // to go backwards from bottom to top
-    let index = guesses.length -1;
+    let index = guesses.length - 1;
     let list = "<ul class='list-group'>";
     // *CODE GOES BELOW HERE *
     // iterate through the guesses using a while loop
@@ -152,10 +152,14 @@ function displayHistory() {
     // append to list variable
     // in whileloop in order to loop through all items use index to go through 
     // while (index is less than guesses.length) continue to loop through it.
-    while(index < guesses.length){
+    // while(index < guesses.length){
+    // traverse the array
+    while (index >= 0) {
         list += "<li class='list-group-item'>" + "You guessed " + guesses[index] + "</li>"
         // increment index to go to the next address 
-        index+=1
+        // index += 1
+        index-=1
+        // break;
         // went through all arrays, created all list items and appended to list variable
         // can be seen on screen because of the dom grabbing history and using .innerHTML equal to the list created
     }
