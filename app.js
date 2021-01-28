@@ -45,6 +45,7 @@ function playGame() {
     */
     let numberGuess = document.getElementById("number-guess").value;
     console.log(numberGuess)
+    displayResult()
 }
 
 /**
@@ -75,6 +76,7 @@ function displayResult() {
     } else {
         console.log("Bing! You Got the right numbe! You are a Psychic!")
     }
+    return
 }
 
 
