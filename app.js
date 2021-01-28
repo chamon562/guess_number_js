@@ -48,6 +48,7 @@ function playGame() {
 
     if (numberGuess >= correctNumber + 20) {
         console.log("Guess is way too high!");
+        document.getElementById("history").innerHTML = "<p>Guess is way too high!</p>"
     } else if (numberGuess >= correctNumber + 10) {
         console.log("Close! But still a little too high.")
     } else if (numberGuess >= correctNumber + 5) {
