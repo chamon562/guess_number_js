@@ -140,7 +140,10 @@ function saveGuessHistory(guess) {
  * HINT: use while loop and string concatentation to create a list of guesses
  */
 function displayHistory() {
-    let index; // TODO
+    // recent result from top to bottom
+    // let index = 0;
+    // to go backwards from bottom to top
+    let index = guesses.length -1;
     let list = "<ul class='list-group'>";
     // *CODE GOES BELOW HERE *
     // iterate through the guesses using a while loop
@@ -150,7 +153,11 @@ function displayHistory() {
     // in whileloop in order to loop through all items use index to go through 
     // while (index is less than guesses.length) continue to loop through it.
     while(index < guesses.length){
-        list += "<li class='list-group-item'>" + "You guessed" + guesses[index] + "</li>"
+        list += "<li class='list-group-item'>" + "You guessed " + guesses[index] + "</li>"
+        // increment index to go to the next address 
+        index+=1
+        // went through all arrays, created all list items and appended to list variable
+        // can be seen on screen because of the dom grabbing history and using .innerHTML equal to the list created
     }
     list += '</ul>'
     document.getElementById("history").innerHTML = list;
