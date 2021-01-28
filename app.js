@@ -59,6 +59,7 @@ function playGame() {
 function displayResult(numberGuess) {
     if (numberGuess >= correctNumber + 20) {
         console.log("Guess is way too high!");
+        showNumberAbove()
     } else if (numberGuess >= correctNumber + 10) {
         console.log("Close! But still a little too high.")
     } else if (numberGuess >= correctNumber + 5) {
@@ -68,6 +69,7 @@ function displayResult(numberGuess) {
     }
     else if (numberGuess <= correctNumber - 20) {
         console.log("Guess is way too low!")
+        showNumberBelow()
     } else if (numberGuess <= correctNumber - 10) {
         console.log("Close! But still alitle too low.")
     } else if (numberGuess <= correctNumber - 5) {
@@ -185,13 +187,13 @@ function showNumberAbove() {
 }
 
 function showNumberBelow() {
-    const text = "Your guess is too low!"
+    const text1 = "Guess is way too low!"
     /**
      * Retrieve the dialog using the getDialog() function
      * and save it to variable called dialog
      * HINT: Use the 'warning' and text parameters 
      */
     // *CODE GOES BELOW HERE *
-    let dialog = getDialog("warning", text);
+    let dialog = getDialog("warning", text1);
     document.getElementById("result").innerHTML = dialog;
 }
