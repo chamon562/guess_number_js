@@ -12,7 +12,7 @@
  * TODO to Done: Console whether the guess is too high, too low, or is correct inside playGame function
  * TODO to Done: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
  * TODO to Done: Complete the showYouWon, showNumberAbove, showNumberBelow
- * TODO: Use the showYouWon... functions within displayResult to display the correct dialog
+ * TODO to Done: Use the showYouWon... functions within displayResult to display the correct dialog
  * TODO: Save the guess history in a variable called guess
  * TODO: Display the guess history using displayHistory() function
  * TODO: Use the initGame() function to restart the game
@@ -20,8 +20,10 @@
 // Stretch Goal add limited number of tries and points for winning with lease amount of guesses. first try is 100 points. give 5 tries. decrease by 20% 80, 60, 40, 20
 // create a back end for score board to store leader board and give a three letter entry. 
 // winner gets random cut cat picture. the greater the win the cooler the picture with gifs or regular stand kitty.
-// Variable to store the list of guesses 
 
+// Variable to store the list of guesses 
+// set variable guesses to empty array to later be populated by using .push() method
+let guesses = [];
 // Variable for store the correct random number 
 /* Create a global variable for correctNumber
 and use the function getRandomNumber */
@@ -49,6 +51,10 @@ function playGame() {
     console.log(numberGuess);
     // pass in numberGuess and accept numberGuess as a parameter in displayResult function
     displayResult(numberGuess);
+    // call saveGuessHistory and pass in the numberGuess of what the user typed in and
+    // when user types in a number click check me and the playgame() function will get called and 
+    // inside that displayResult and saveGuessHisotry will get called and guesses.push(guess) value to the top of the array
+    saveGuessHistory(numberGuess);
 }
 
 /**
@@ -118,6 +124,9 @@ function getRandomNumber() {
  */
 function saveGuessHistory(guess) {
     // *CODE GOES BELOW HERE *
+    // this function needs to be called and save in main game logic
+    guesses.push(guess);
+    console.log(guesses);
 }
 
 /**
