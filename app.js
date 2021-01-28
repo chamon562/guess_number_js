@@ -75,7 +75,8 @@ function displayResult(numberGuess) {
     } else if (numberGuess < correctNumber) {
         console.log("Extremely Very close! But still low. ")
     } else {
-        console.log("Bing! You Got the right numbe! You are a Psychic!")
+        console.log("Bing0! You Got the right numbe! You are a Psychic!")
+        showYouWon();
     }
     return
 }
@@ -163,9 +164,9 @@ function showYouWon() {
     // *CODE GOES BELOW HERE *
     // created a variable dialog and made it equal to getDialog function and pass it "won" , text
     let dialog = getDialog("won", text);
+    console.log(dialog)
     document.getElementById("result").innerHTML = dialog;
 }
-
 function showNumberAbove() {
     const text = "Your guess is too high!"
     /**
