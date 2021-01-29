@@ -81,10 +81,13 @@ function displayResult(numberGuess) {
         document.getElementById("result").innerHTML = getDialog("warning", "Close! But still a little too high.")
     } else if (numberGuess >= correctNumber + 5) {
         console.log("Very close! But still a little bit high.")
-        showNumberAbove();
+        // showNumberAbove();
+        document.getElementById("result").innerHTML = getDialog("warning", "Very close! But still a little bit high.")
     } else if (numberGuess > correctNumber) {
         console.log("Extremely very close! But still high.")
         showNumberAbove();
+        document.getElementById("result").innerHTML = getDialog("warning", "Extremely very close! But still high.")
+
     }
     else if (numberGuess <= correctNumber - 20) {
         console.log("Guess is way too low!")
