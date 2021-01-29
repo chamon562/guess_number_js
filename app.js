@@ -65,47 +65,48 @@ function playGame() {
  */
 // *CODE GOES BELOW HERE *
 function displayResult(numberGuess) {
-    if (numberGuess > correctNumber) {
-        showNumberAbove();
-    } else if (numberGuess < correctNumber) {
-        showNumberBelow();
-    } else {
-        showYouWon();
-    }
-    // if (numberGuess >= correctNumber + 20) {
-    //     console.log("Guess is way too high!");
+    // if (numberGuess > correctNumber) {
     //     showNumberAbove();
-    // } else if (numberGuess >= correctNumber + 10) {
-    //     console.log("Close! But still a little too high.")
-    //     showNumberAbove();
-    // } else if (numberGuess >= correctNumber + 5) {
-    //     console.log("Very close! But still a little bit high.")
-    //     showNumberAbove();
-    // } else if (numberGuess > correctNumber) {
-    //     console.log("Extremely very close! But still high.")
-    //     showNumberAbove();
-    // }
-    // else if (numberGuess <= correctNumber - 20) {
-    //     console.log("Guess is way too low!")
-    //     showNumberBelow();
-    // } else if (numberGuess <= correctNumber - 10) {
-    //     console.log("Close! But still alitle too low.")
-    //     showNumberBelow();
-
-    // } else if (numberGuess <= correctNumber - 5) {
-    //     console.log("Very close! But still a little bit low.")
-    //     showNumberBelow();
-
     // } else if (numberGuess < correctNumber) {
-    //     console.log("Extremely Very close! But still low.")
     //     showNumberBelow();
-
     // } else {
-    //     console.log("Bingo! You Got the right number! You are a Psychic!")
     //     showYouWon();
-
     // }
-    // return
+    if (numberGuess >= correctNumber + 20) {
+        console.log("Guess is way too high!");
+        showNumberAbove();
+    } else if (numberGuess >= correctNumber + 10) {
+        console.log("Close! But still a little too high.")
+        // showNumberAbove2();
+        document.getElementById("result").innerHTML = getDialog("warning", "Close! But still a little too high.")
+    } else if (numberGuess >= correctNumber + 5) {
+        console.log("Very close! But still a little bit high.")
+        showNumberAbove();
+    } else if (numberGuess > correctNumber) {
+        console.log("Extremely very close! But still high.")
+        showNumberAbove();
+    }
+    else if (numberGuess <= correctNumber - 20) {
+        console.log("Guess is way too low!")
+        showNumberBelow();
+    } else if (numberGuess <= correctNumber - 10) {
+        console.log("Close! But still alitle too low.")
+        showNumberBelow();
+
+    } else if (numberGuess <= correctNumber - 5) {
+        console.log("Very close! But still a little bit low.")
+        showNumberBelow();
+
+    } else if (numberGuess < correctNumber) {
+        console.log("Extremely Very close! But still low.")
+        showNumberBelow();
+
+    } else {
+        console.log("Bingo! You Got the right number! You are a Psychic!")
+        showYouWon();
+
+    }
+    
 }
 
 
@@ -231,7 +232,6 @@ function showYouWon() {
 }
 function showNumberAbove() {
     const text1 = "Guess is way too high!"
-    // const text2 = "Close! But still a little too high."
     // const text3 = "Very close! But still a little bit high."
     // const text4 = "Extremely very close! But still high."
     /**
