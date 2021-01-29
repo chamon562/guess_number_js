@@ -85,31 +85,36 @@ function displayResult(numberGuess) {
         document.getElementById("result").innerHTML = getDialog("warning", "Very close! But still a little bit high.")
     } else if (numberGuess > correctNumber) {
         console.log("Extremely very close! But still high.")
-        showNumberAbove();
+        // showNumberAbove();
         document.getElementById("result").innerHTML = getDialog("warning", "Extremely very close! But still high.")
 
     }
     else if (numberGuess <= correctNumber - 20) {
         console.log("Guess is way too low!")
         showNumberBelow();
+
     } else if (numberGuess <= correctNumber - 10) {
         console.log("Close! But still alitle too low.")
-        showNumberBelow();
+        // showNumberBelow();
+        document.getElementById("result").innerHTML = getDialog("warning", "Close! But still alitle too low.")
 
     } else if (numberGuess <= correctNumber - 5) {
         console.log("Very close! But still a little bit low.")
-        showNumberBelow();
+        // showNumberBelow();
+        document.getElementById("result").innerHTML = getDialog("warning", "Very close! But still a little bit low.")
+
 
     } else if (numberGuess < correctNumber) {
         console.log("Extremely Very close! But still low.")
-        showNumberBelow();
+        // showNumberBelow();
+        document.getElementById("result").innerHTML = getDialog("warning", "Extremely Very close! But still low.")
 
     } else {
         console.log("Bingo! You Got the right number! You are a Psychic!")
         showYouWon();
 
     }
-    
+
 }
 
 
