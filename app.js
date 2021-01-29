@@ -227,6 +227,10 @@ function getDialog(dialogType, text) {
 
 function showYouWon() {
     const text = "Bingo! You Got the right number! You are a Psychic!"
+    const image = document.createElement("img");
+    console.log(image)
+    image.src = "https://i.pinimg.com/originals/84/c8/ba/84c8bab01787f2ee1ebef1378e9e8444.gif"
+    document.querySelector(".container").appendChild(image)
     /**
      * Retrieve the dialog using the getDialog() function
      * and save it to variable called dialog
@@ -237,6 +241,7 @@ function showYouWon() {
     let dialog = getDialog("won", text);
     console.log(dialog)
     document.getElementById("result").innerHTML = dialog;
+
 }
 function showNumberAbove() {
     const text1 = "Guess is way too high!"
